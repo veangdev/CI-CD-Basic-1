@@ -12,7 +12,7 @@ def add():
     b = int(request.args.get("b", 0))
     return jsonify(result=a + b)
 
-@app.route("/list", method=["GET"])
+@app.route("/list", methods=["GET"])
 def list():
     arrays = [
         {"id": "dol", "name": "Array 1", "size": 10},
@@ -23,3 +23,4 @@ def list():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050)
+  
